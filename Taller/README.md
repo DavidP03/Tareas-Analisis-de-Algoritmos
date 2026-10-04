@@ -21,3 +21,15 @@ Complejidad de Espacio: O(m x n). Este es el espacio que necesito en el peor de 
 
 ## Link:
 ![Accepted - Number of Islands](Evidencias/number-of-islands-accepted.png)
+
+## 1143. Longest Common Subsequence
+
+## Idea: 
+Para este problema, utilicé un enfoque de programación dinámica tabular (bottom-up), evitando la recursión pura para no caer en tiempos exponenciales. La idea es construir la solución a partir de los prefijos de las cadenas.
+
+## Complejidad:
+Complejidad de Tiempo: $\Theta\$(n x m), donde n es la longitud de text1 y m es la longitud de text2. Esto se debe a que utilizo dos ciclos anidados para llenar cada una de las celdas de la matriz exactamente una vez, y la operación dentro de los ciclos toma un tiempo constante O(1).
+Complejidad de Espacio: $\Theta\$(n x m), que es el espacio que ocupo en memoria para almacenar toda la matriz bidimensional. Cabe mencionar que, dado que para calcular la fila actual solo dependo de la fila inmediatamente anterior, este espacio se podría llegar a comprimir a $\Theta\$(min(n, m)) utilizando un arreglo de dos filas, pero para la legibilidad de la tabulación completa mantuve la matriz de tamaño n x m.
+
+## Link:
+![Accepted - Longest Common Subsequence](Evidencias/longest-common-subsequence-accepted.png)
