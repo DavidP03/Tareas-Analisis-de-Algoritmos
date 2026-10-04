@@ -68,7 +68,7 @@ Para este ejercicio evité el enfoque de Programación Dinámica (como el O(n * 
 
 ## Complejidad:
 Complejidad de Tiempo: O(n^(t / min)), donde $n$ es la cantidad de candidatos, t es el target original, y min es el valor más pequeño dentro del arreglo de candidatos. En el peor caso, el árbol de recursión tiene una profundidad máxima de t / min (ej. si el target es 8 y el mínimo es 2, el árbol baja 4 niveles sumando [2,2,2,2]), y en cada nivel el ciclo itera hasta n veces. Por tanto, es un algoritmo de tiempo exponencial propio del backtracking.
-Complejidad de Espacio: O(t / \min) por el espacio ocupado por la pila de llamadas (call stack) en la recursión y por el arreglo temporal current_comb, más el espacio de memoria adicional que requiere la lista final de salida para almacenar todas las respuestas encontradas.
+Complejidad de Espacio: O(t / min) por el espacio ocupado por la pila de llamadas (call stack) en la recursión y por el arreglo temporal current_comb, más el espacio de memoria adicional que requiere la lista final de salida para almacenar todas las respuestas encontradas.
 
 ## Link:
 ![Accepted - Combination Sum](Evidencias/combination-sum-accepted.png)
