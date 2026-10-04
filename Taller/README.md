@@ -9,3 +9,15 @@ Complejidad de Espacio: O(n), donde n es el número de intervalos. Este espacio 
 
 ## Link:
 ![Accepted - Merge Intervals](Evidencias/merge-interval-accepted.png)
+
+## 200. Number of Islands
+
+## Idea: 
+La idea es contar el número de componentes conexas del grafo. Para esto, recorro toda la matriz celda por celda; cada vez que encuentro un '1' que no he visitado, sé que encontré una nueva isla, así que sumo 1 a mi contador. Inmediatamente lanzo una Búsqueda en Profundidad (DFS) desde esa celda para recorrer toda la isla y "hundirla" (marco cada celda contigua reemplazando el '1' por '0'). De esta manera, me aseguro de que el DFS marque toda la componente conexa y no la vuelva a contar en el recorrido principal.
+
+## Complejidad:
+Complejidad de Tiempo: $\Theta\$(m x n), donde $m$ son las filas y n las columnas de la grilla. Aunque hay llamados recursivos del DFS, cada celda de la matriz se procesa (se visita y se marca) un número constante de veces a lo sumo, por lo que el tiempo de ejecución crece de forma estrictamente proporcional al tamaño total de la grilla.
+Complejidad de Espacio: O(m x n). Este es el espacio que necesito en el peor de los casos para la pila de llamadas (call stack) de la recursividad del DFS. Esto ocurriría en un escenario extremo donde toda la matriz fuera pura tierra formando un solo camino en zigzag, haciendo que el DFS se anide m x n veces.
+
+## Link:
+![Accepted - Number of Islands](Evidencias/number-of-islands-accepted.png)
