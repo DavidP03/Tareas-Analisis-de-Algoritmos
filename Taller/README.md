@@ -8,4 +8,4 @@ Complejidad de Tiempo: O(n log n), donde n es la cantidad total de intervalos en
 Complejidad de Espacio: O(n), donde n es el número de intervalos. Este espacio es el que necesito para la lista resultante donde voy almacenando los elementos definitivos (que en el peor de los casos, si no hay solapamientos, serán los mismos n elementos) y por el espacio de memoria auxiliar que utiliza el método de ordenamiento del lenguaje.
 
 ## Link:
-![Accepted - Merge Intervals](Evidencias/merge-intervals-accepted.png)
+![Accepted - Merge Intervals](Evidencias/merge-interval-accepted.png)
