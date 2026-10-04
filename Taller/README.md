@@ -67,7 +67,7 @@ Backtracking.
 Para este ejercicio evité el enfoque de Programación Dinámica (como el O(n * target) de Coin Change), ya que mi objetivo no es encontrar un mínimo, sino enumerar de forma exhaustiva las combinaciones válidas. El estado de mi búsqueda en cada llamado recursivo está definido por: el índice desde el cual tengo permitido tomar números, el objetivo restante (target actual) y la combinación que he construido hasta el momento.
 
 ## Complejidad:
-Complejidad de Tiempo: O(n^(t / min)), donde $n$ es la cantidad de candidatos, t es el target original, y min es el valor más pequeño dentro del arreglo de candidatos. En el peor caso, el árbol de recursión tiene una profundidad máxima de t / min (ej. si el target es 8 y el mínimo es 2, el árbol baja 4 niveles sumando [2,2,2,2]), y en cada nivel el ciclo itera hasta $n$ veces. Por tanto, es un algoritmo de tiempo exponencial propio del backtracking.
+Complejidad de Tiempo: O(n^(t / min)), donde $n$ es la cantidad de candidatos, t es el target original, y min es el valor más pequeño dentro del arreglo de candidatos. En el peor caso, el árbol de recursión tiene una profundidad máxima de t / min (ej. si el target es 8 y el mínimo es 2, el árbol baja 4 niveles sumando [2,2,2,2]), y en cada nivel el ciclo itera hasta n veces. Por tanto, es un algoritmo de tiempo exponencial propio del backtracking.
 Complejidad de Espacio: O(t / \min) por el espacio ocupado por la pila de llamadas (call stack) en la recursión y por el arreglo temporal current_comb, más el espacio de memoria adicional que requiere la lista final de salida para almacenar todas las respuestas encontradas.
 
 ## Link:
