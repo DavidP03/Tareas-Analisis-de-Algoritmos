@@ -33,3 +33,15 @@ Complejidad de Espacio: $\Theta\$(n x m), que es el espacio que ocupo en memoria
 
 ## Link:
 ![Accepted - Longest Common Subsequence](Evidencias/longest-common-subsequence-accepted.png)
+
+## 435. Non-overlapping Intervals
+
+## Idea: 
+Para este ejercicio, modelé el problema como una selección de actividades. En lugar de pensar directamente en cuáles intervalos borrar, me enfoqué en maximizar cuántos intervalos puedo conservar sin que se solapen.
+
+## Complejidad:
+Complejidad de Tiempo: O(n log n), donde n es la cantidad de intervalos. Un enfoque de programación dinámica comparando todos contra todos tomaría O(n^2), pero con este criterio greedy el paso que domina el tiempo es el ordenamiento inicial (sort). Después de ordenar, hacer la elección óptima solo requiere una única pasada lineal de O(n).
+Complejidad de Espacio: O(n) en el peor de los casos. Aunque la lógica de selección solo utiliza variables extra que toman espacio constante O(1), el algoritmo de ordenamiento interno de Python (Timsort) puede requerir hasta O(n) de memoria adicional auxiliar para realizar las copias y mezclas de las corridas.
+
+## Link:
+![Accepted - Non-overlapping Intervals](Evidencias/non-overlapping-intervals-accepted.png)
